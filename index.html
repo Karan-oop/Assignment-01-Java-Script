@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <span class="emoji-icon">🎯</span>
+                Smart Event Dashboard
+            </h1>
+            <p class="subtitle">Organize your events with style</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Add Event Form -->
+            <div class="card">
+                <h2 class="card-header">Add New Event</h2>
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title:</label>
+                        <input type="text" id="eventTitle" placeholder="Enter event title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventCategory">Category:</label>
+                        <select id="eventCategory" required>
+                            <option value="Conference">Conference</option>
+                            <option value="Meeting">Meeting</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Meetup">Meetup</option>
+                            <option value="Webinar">Webinar</option>
+                            <option value="Social Impact">Social Impact</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDescription">Description:</label>
+                        <textarea id="eventDescription" placeholder="Describe your event..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Add Event</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- My Events -->
+            <div class="card">
+                <h2 class="card-header">My Events</h2>
+                
+                <div class="events-actions">
+                    <button id="clearAllBtn" class="btn btn-danger btn-secondary">
+                        <span>Clear All Events</span>
+                    </button>
+                    <button id="addSampleBtn" class="btn btn-secondary">
+                        <span>Add Sample Events</span>
+                    </button>
+                </div>
+
+                <div id="eventContainer" class="event-container">
+                    <div class="empty-state">No events yet. Add your first event!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOM Manipulation Demo -->
+        <div class="card demo-section">
+            <h2 class="card-header">DOM Manipulation Demo</h2>
+            <div id="demoContent" class="demo-content">
+                You Pressed: <strong>Shift</strong>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <center><h4>Designed By : Karan Chandra Kothari 💕</h4></center>
+
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
+
 
