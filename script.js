@@ -144,3 +144,6 @@ document.addEventListener('keydown', (e) => {
 // Set minimum date to today
 
 document.getElementById('eventDate').min = new Date().toISOString().split('T')[0];
+
+
+
