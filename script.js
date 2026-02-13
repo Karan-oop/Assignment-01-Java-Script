@@ -5,6 +5,7 @@ let events = JSON.parse(localStorage.getItem('events')) || [];
 const eventForm = document.getElementById('eventForm');
 const eventContainer = document.getElementById('eventContainer');
 const clearAllBtn = document.getElementById('clearAllBtn');
+
 const addSampleBtn = document.getElementById('addSampleBtn');
 const demoContent = document.getElementById('demoContent');
 
@@ -142,7 +143,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Set minimum date to today
-
 document.getElementById('eventDate').min = new Date().toISOString().split('T')[0];
 
 
