@@ -1,3 +1,6 @@
+/*Update script.js and updating animations*/
+
+
 // Event storage
 let events = JSON.parse(localStorage.getItem('events')) || [];
 
