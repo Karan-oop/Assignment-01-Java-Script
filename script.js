@@ -1,6 +1,3 @@
-/*Update script.js and updating animations*/
-
-
 // Event storage
 let events = JSON.parse(localStorage.getItem('events')) || [];
 
@@ -8,7 +5,6 @@ let events = JSON.parse(localStorage.getItem('events')) || [];
 const eventForm = document.getElementById('eventForm');
 const eventContainer = document.getElementById('eventContainer');
 const clearAllBtn = document.getElementById('clearAllBtn');
-
 const addSampleBtn = document.getElementById('addSampleBtn');
 const demoContent = document.getElementById('demoContent');
 
@@ -60,6 +56,18 @@ clearAllBtn.addEventListener('click', () => {
 
 // Add sample events
 addSampleBtn.addEventListener('click', () => {
+    // Check if sample events already exist
+    const sampleEventTitles = ['Tech Conference 2026', 'Design Workshop', 'Developer Meetup'];
+    const existingSampleEvents = events.filter(event => 
+        sampleEventTitles.includes(event.title)
+    );
+    
+    // If sample events already exist, show message and return
+    if (existingSampleEvents.length > 0) {
+        alert('Sample events have already been added!');
+        return;
+    }
+    
     const sampleEvents = [
         {
             id: Date.now() + 1,
@@ -87,6 +95,9 @@ addSampleBtn.addEventListener('click', () => {
     events = [...events, ...sampleEvents];
     saveEvents();
     renderEvents();
+    
+    // Show success message
+    alert('Sample events added successfully!');
 });
 
 // Render events
