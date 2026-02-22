@@ -97,7 +97,7 @@ addSampleBtn.addEventListener('click', () => {
     renderEvents();
     
     // Show success message
-    alert('Sample events added successfully!');
+    alert('Upcoming events added successfully!');
 });
 
 // Render events
