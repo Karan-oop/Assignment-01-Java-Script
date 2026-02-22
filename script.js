@@ -64,7 +64,7 @@ addSampleBtn.addEventListener('click', () => {
     
     // If sample events already exist, show message and return
     if (existingSampleEvents.length > 0) {
-        alert('Sample events have already been added!');
+        alert('Upcoming events have already been added!');
         return;
     }
     
